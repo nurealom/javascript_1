@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--  CSS links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <style>
+      
+      #btn3{
+        text-align: center;
+        border:2px solid red;
+      }
+        #h2{
+        text-align: center;
+        border:2px solid red;
+        padding:10px;
+        margin-top: 20px;
+
+      }
+
+      #button{
+        text-align: center;
+        border:5px solid green;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+      }
+      #content{
+        text-align: center;
+        border:5px solid green;
+      }
+
+    </style>
+    
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+    <button type="button" class="btn  btn-danger">show</button>
+    <button type="button" class="btn btn2 btn-danger">hide</button>
+    <button type="button" class="btn btn3 btn-danger">toggle</button>
+
+    <h1 id="h1">Lorem ipsum dolor sit amet.</h1>
+
+    <button type="button" id="btn" class="btn btn-danger">fadout</button>
+    <button type="button" id="btn1" class="btn btn-danger">fadein</button>
+    <button type="button" id="btn3" class="btn btn-danger">fadeToggle</button>
+    <button type="button" id="btn3" class="btn btn-danger">fadeTo</button>
+
+    <h1 id="h2">Lorem ipsum dolor sit amet.</h1>
+
+
+    <div id="button">click me</div>
+    <div id="content">SLorem ipsum dolor.</div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <button>Do it!</button>
+<span>Are you sure? (type 'yes' if you are) </span>
+<div>
+  <form>
+    <input type="text"  value="as;ldkfjalsdf">
+  </form>
+</div>
+<p style="display:none;">I'm hidden...</p>
+ 
+    
+
+    
+    <!-- jQuery links -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    
+    <script>
+      $(document).ready(function(){
+        $("btn").click(function(){
+          $("#h1").show(2000);
+        })
+         $(".btn2").click(function(){
+          $("#h1").hide(2000);
+        })
+         $(".btn3").click(function(){
+          $("#h2").toggle("fast");
+        })
+      })
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#btn").click(function(){
+          $("#h2").fadeOut();
+        })
+         $("#btn1").click(function(){
+          $("#h2").fadein();
+        })
+         $("#btn3").click(function(){
+          $("#h2").fadeToggle();
+        })
+          $("#btn3").click(function(){
+          $("#h2").fadeTo(1000,0.5);
+        })
+      })
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#button").click(function(){
+          $("#content").slideToggle();
+      
+        })
+         
+      })
+    </script>
+     <script>
+      $(document).ready(function(){
+        $("p").click(function(){
+          $(this).hide("fast");
+      
+        })
+         
+      })
+    </script>
+    <script>
+function doIt() {
+  $( "span,div" ).show( "slow" );
+}
+// Can pass in function name
+$( "button" ).click( doIt );
+ 
+$( "form" ).submit(function( event ) {
+  if ( $( "input" ).val() === "yes" ) {
+    $( "p" ).show( 4000, function() {
+      $( this ).text( "Ok, DONE! (now showing)" );
+    });
+  }
+  $( "span,div" ).hide( "fast" );
+ 
+  // Prevent form submission
+  event.preventDefault();
+});
+</script>
+
+
+
+
+  </body>
+</html>
